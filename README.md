@@ -1,4 +1,4 @@
-# 📑 My Notes
+# 📝 My notes about learning process
 All notes about learning process and programming new tips 🫯
 
 ---
@@ -7,6 +7,7 @@ All notes about learning process and programming new tips 🫯
 - .NET Frameworks
 - MSSQL Server
 - Version Control (Git)
+- Vibe Coding)
 
 ---
 
@@ -24,6 +25,39 @@ bakhtovar = {
 
 ---
 
-I give me option back 🔙
+# Notes:
+1. Connect to Database:
+```
+using System.Data.SqlClient;
 
-Now that I will write here all my notes about learning progress 📈
+class Program
+{
+    static void Main(string[] args)
+    {
+        string stringConnection = 
+        "SERVER=.\\SQLEXPRESS;
+        Database=test_db;
+        Trusted_Connection=True;
+        TrustServerCertificate=True";
+        
+        // Connecting
+        SqlConnection connect = new SqlConnection(connectionString);
+        
+        // Checking for connection is true...
+        try
+        {
+            Console.WriteLine("Checking...");
+            connection.Open();
+            Console.WriteLine("Connected!");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+        finally
+        {
+            Console.ReadLine();
+        }
+    }
+}
+```
