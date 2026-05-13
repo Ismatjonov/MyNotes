@@ -26,7 +26,8 @@ bakhtovar = {
 ---
 
 # Notes:
-1. Connect to Database:
+
+## 1. Connect to Database:
 
 ```csharp
 using System.Data.SqlClient;
@@ -58,4 +59,10 @@ class Program
         }
     }
 }
+```
+## 2. Multithreading
+Creating and start a new thread
+```csharp
+Thread myThread = new Thread(Print);
+myThread.Start();
 ```
