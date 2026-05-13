@@ -65,6 +65,13 @@ Creating and start a new thread
 ```csharp
 Thread myThread = new Thread(Print);
 myThread.Start();
+
+void Print()
+{
+    Console.WriteLine("Hello Threads");
+}
+
+public delegate void ThreadStart();
 ```
 Some useful properties and methods of Thread's class
 ```csharp
