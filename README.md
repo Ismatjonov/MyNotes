@@ -78,3 +78,13 @@ Some useful properties and methods of Thread's class
 Thread.Name;  // Name of current thread
 Thread.Sleep();  // Set up the timer for executing
 ```
+Using method Sleep()
+```csharp
+using System.Threading;
+ 
+for(int i = 0; i < 10; i++)
+{
+    Thread.Sleep(500);      // задержка выполнения на 500 миллисекунд
+    Console.WriteLine(i);
+}
+```
