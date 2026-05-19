@@ -89,7 +89,7 @@ for(int i = 0; i < 10; i++)
 }
 ```
 Thread's synchronization with operator `lock`
-```
+```csharp
 object myLock = new ();
 int x = 0;  // common resource
 
