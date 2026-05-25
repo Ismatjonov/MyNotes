@@ -145,7 +145,7 @@ void Print()
     }
 }
 ```
-method TryEnter()
+method `TryEnter()`
 ```csharp
 int x = 0;  // некоторый общий ресурс
 Lock _lockObj = new(); // объект-заглушка для синхронизации доступа
@@ -176,7 +176,7 @@ void Print()
     }
 }
 ```
-method EnterScope()
+method `EnterScope()`
 A very simple way to synchronize threads
 ```csharp
 int x = 0;  // некоторый общий ресурс
