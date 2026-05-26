@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="Pluser/Pluser.vcxproj" Id="6f5ca78b-a9a3-4f27-a34f-2fb75085b162" />
+  <Project Path="Task/Task.vcxproj" Id="567bfe20-67e3-412f-a72c-834b67e72671" />
 </Solution>
