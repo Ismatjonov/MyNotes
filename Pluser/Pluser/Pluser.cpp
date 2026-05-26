@@ -32,5 +32,7 @@ int main()
         cout << i << " * " << i << " = " << i * i << endl;
     }
 
+    cout << "Is anything up to dated?";
+
     return 0;
 }
