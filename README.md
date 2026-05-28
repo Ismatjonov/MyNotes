@@ -204,3 +204,8 @@ void Print()
     }  // завершение критической секции
 }
 ```
+## Task
+Creating a new task
+```csharp
+Task myTask = new Task(() => Console.WriteLine("Hello Task!");
+```
