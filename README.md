@@ -241,3 +241,16 @@ task1.Start();  // запускаем задачу
 Console.WriteLine("Main Ends");
 task1.Wait();   // ожидаем выполнения задачи
 ```
+Running synchronously
+```csharp
+Console.WriteLine("Main Starts");
+// создаем задачу
+Task task1 = new Task(() =>
+{
+    Console.WriteLine("Task Starts");
+    Thread.Sleep(1000); 
+    Console.WriteLine("Task Ends");
+ });
+task1.RunSynchronously(); // запускаем задачу синхронно
+Console.WriteLine("Main Ends"); // этот вызов ждет завершения задачи task1 
+```
