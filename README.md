@@ -227,3 +227,17 @@ task1.Wait();   // ожидаем завершения задачи task1
 task2.Wait();   // ожидаем завершения задачи task2
 task3.Wait();   // ожидаем завершения задачи task3
 ```
+Exploring method Wait()
+```csharp
+Console.WriteLine("Main Starts");
+// создаем задачу
+Task task1 = new Task(() =>
+{
+    Console.WriteLine("Task Starts");
+    Thread.Sleep(1000);     // задержка на 1 секунду - имитация долгой работы
+    Console.WriteLine("Task Ends");
+ });
+task1.Start();  // запускаем задачу
+Console.WriteLine("Main Ends");
+task1.Wait();   // ожидаем выполнения задачи
+```
