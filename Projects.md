@@ -4,6 +4,7 @@ It only have a two commands
 - History (Press H)
 - Exit (Ctrl + C)
 > It's very simple to use)
+---
 # ToDo List Application
 Second project introduced by ChatGPT to upgrade my skill is also simple Console Application.
 
@@ -16,3 +17,4 @@ Beside of calculator App this one has more command options:
 - Exit app (E)
 
 The level is close to advanced applications. the reason is using `class` and CRUD operation.
+
