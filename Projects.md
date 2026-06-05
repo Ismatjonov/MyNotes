@@ -4,6 +4,7 @@ It only have a two commands
 - History (Press H)
 - Exit (Ctrl + C)
 > It's very simple to use)
+You can test an app on my Telegram Channel (Roslyner/Calculator.exe)[https://t.me/roslyner/19]
 ---
 # ToDo List Application
 Second project introduced by ChatGPT to upgrade my skill is also simple Console Application.
