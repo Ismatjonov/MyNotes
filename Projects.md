@@ -22,3 +22,4 @@ Beside of calculator App this one has more command options:
 
 > The level is close to advanced applications. the reason is using `class` and CRUD operation.
 
+You can test an app on my Telegram Channel [Roslyner/Calculator.exe](https://t.me/roslyner/22)
