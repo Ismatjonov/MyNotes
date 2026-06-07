@@ -8,7 +8,9 @@ It only have a two commands
 > It's very simple to use)
 
 You can test an app on my Telegram Channel [Roslyner/Calculator.exe](https://t.me/roslyner/19)
+
 ---
+
 # ToDo List Application
 Second project introduced by ChatGPT to upgrade my skill is also simple Console Application.
 
@@ -22,4 +24,4 @@ Beside of calculator App this one has more command options:
 
 > The level is close to advanced applications. the reason is using `class` and CRUD operation.
 
-You can test an app on my Telegram Channel [Roslyner/Calculator.exe](https://t.me/roslyner/22)
+You can test an app on my Telegram Channel [Roslyner/To-do list.exe](https://t.me/roslyner/22)
