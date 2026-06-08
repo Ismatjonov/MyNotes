@@ -26,6 +26,8 @@ Beside of calculator App this one has more command options:
 
 You can test an app on my Telegram Channel [Roslyner/To-do list.exe](https://t.me/roslyner/29)
 
+---
+
 # Library App
 My third console application considered to the library and books. In this project I use `class` and principles of OOP. 
 
