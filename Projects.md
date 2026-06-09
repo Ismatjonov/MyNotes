@@ -42,3 +42,23 @@ As previous project this one has same command options:
 > I upgrade my level day to day and project by project 🚀
 
 You can test it on my Telegram Channel [Roslyner/Library.exe](https://t.me/roslyner/32)
+
+---
+
+# Warehouse of Goods App
+My another console application cosider to the stock and products
+
+It's more dificult than other projects, because in this project I used `Event`, `Dictionary`, `Thread` (for animation) and separated class for saving logs.
+
+Command options:
+- [+] - Add product
+- [-] - Remove product
+- [A] - Show all products
+- [E] - Edit product
+- [S] - Sell product
+- [W] - Warehouse Stock
+- [Q] - Quit app
+
+> It's too close to my future big and important project!
+
+Follow to my Telegram Channel:[**Roslyner**](https://t.me/roslyner) to see more about _C#_ and _.NET_ technology.
