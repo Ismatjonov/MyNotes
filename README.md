@@ -271,3 +271,16 @@ Console.WriteLine($"task1 Status: {task1.Status}");
  
 task1.Wait(); // ожидаем завершения задачи
 ```
+Parallel
+```csharp
+ParallelLoopResult result = Parallel.For<int>(1, 5, Square);
+foerach(var r in result)
+{
+    Console.WriteLine(r);
+}
+
+int Square(int n)
+{
+    return n * n;
+}
+```
