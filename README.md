@@ -284,3 +284,19 @@ int Square(int n)
     return n * n;
 }
 ```
+Cancellation Task 
+```csharp
+CancellationTokenSource source = new CancellationTokenSource();
+CancellationToken token = source.Token;
+
+Task task = new Task (() => {
+    Console.WriteLine("Task started");
+    Thread.Sleep(3000);
+    token.Cancel();
+});
+task.Start();
+if(task.State == "Canceled")
+    Console.WriteLine("Task cancelled");
+task.Wait();
+token.Dispose();
+```
