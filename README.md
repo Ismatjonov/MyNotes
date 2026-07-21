@@ -300,3 +300,9 @@ if(task.State == "Canceled")
 task.Wait();
 token.Dispose();
 ```
+## File System
+Creating a new directory
+```csharp
+DirectoryInfo di = new DirectoryInfo(PATH);
+di.Create();
+```
