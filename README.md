@@ -17,7 +17,7 @@ All notes about learning process and programming new tips 🫯
 bakhtovar = {
     name: "Bakhtovar",
     surname: "Ismatjonov",
-    age: 19,
+    age: 20,
     gender: "male",
     isMarried: false 
 };
