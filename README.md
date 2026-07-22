@@ -315,3 +315,12 @@ Creating Subdirectory
 DirectoryInfo di = new DirectoryInfo(PATH);
 di.CreateSubDirectory("SUB_PATH");
 ```
+Directory deletion
+```csharp
+// way 1
+DirectoryInfo di = new DirectoryInfo(PATH);
+di.Delte();
+
+// way 2
+Directory.DeleteDirectory(PATH);
+```
