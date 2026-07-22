@@ -306,3 +306,7 @@ Creating a new directory
 DirectoryInfo di = new DirectoryInfo(PATH);
 di.Create();
 ```
+Alterway to ceate
+```csharp
+Directory.CreateDirectory(PATH);
+```
