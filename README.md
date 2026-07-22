@@ -310,3 +310,8 @@ Alterway to ceate
 ```csharp
 Directory.CreateDirectory(PATH);
 ```
+Creating Subdirectory
+```csharp
+DirectoryInfo di = new DirectoryInfo(PATH);
+di.CreateSubDirectory("SUB_PATH");
+```
