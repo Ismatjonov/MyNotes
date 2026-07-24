@@ -324,3 +324,7 @@ di.Delte();
 // way 2
 Directory.DeleteDirectory(PATH);
 ```
+Creating a file
+```csharp
+File.CreateFile(PATH);
+```
