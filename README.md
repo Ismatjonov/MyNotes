@@ -326,5 +326,10 @@ Directory.DeleteDirectory(PATH);
 ```
 Creating a file
 ```csharp
+// way 1
 File.CreateFile(PATH);
+
+// way 2
+FileInfo fi = new FileInfo(PATH);
+fi.Create();
 ```
