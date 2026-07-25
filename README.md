@@ -339,4 +339,7 @@ Copying files
 File.CopyTo(PATH);
 // or with async method
 await File.CopyToAsync(PATH);
+// way 2
+FileInfo fi = new FileInfo(PATH);
+fi.Copy(PATH)
 ```
