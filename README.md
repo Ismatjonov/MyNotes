@@ -333,3 +333,10 @@ File.CreateFile(PATH);
 FileInfo fi = new FileInfo(PATH);
 fi.Create();
 ```
+Copying files
+```csharp
+// way #1
+File.CopyTo(PATH);
+// or with async method
+await File.CopyToAsync(PATH);
+```
