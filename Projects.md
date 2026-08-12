@@ -62,3 +62,7 @@ Command options:
 > It's too close to my future big and important project!
 
 Follow to my Telegram Channel:[**Roslyner**](https://t.me/roslyner) to see more about _C#_ and _.NET_ technology.
+
+---
+
+'we'll never stop. 
