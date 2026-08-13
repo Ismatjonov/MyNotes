@@ -361,7 +361,18 @@ Serializing JSON
 using System.Text.Json;
 
 Person bakhtovar = new Person("Bakhtovar", 20);
-string json = JsonSerializer(person);
+string json = JsonSerializer(bakhtovar);
+Console.WriteLine(json);
+
+public record class Person(string Name, int Age);
+```
+Deserializing JSON
+```csharp
+Person bakhtovar = new Person("Bakhtovar", 20);
+string json = JsonSerializer(bakhtovar);
+
+Person? bahrullo = Deserializer<Person>(json);
+Console.Writelen($"{bahrullo.Name - bahrullo.Age}");
 
 public record class Person(string Name, int Age);
 ```
