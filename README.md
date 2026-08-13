@@ -351,3 +351,17 @@ fi.Move(PATH2);
 // way 2
 File.MoveFile(PATH);
 ```
+
+---
+
+## JSON
+
+Serializing JSON
+```csharp
+using System.Text.Json;
+
+Person bakhtovar = new Person("Bakhtovar", 20);
+string json = JsonSerializer(person);
+
+public record class Person(string Name, int Age);
+```
