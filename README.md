@@ -343,3 +343,11 @@ await File.CopyToAsync(PATH);
 FileInfo fi = new FileInfo(PATH);
 fi.Copy(PATH)
 ```
+Moving the file
+```csharp
+// way 1
+FileInfo fi = new FileInfo(PATH);
+fi.Move(PATH2);
+// way 2
+File.MoveFile(PATH);
+```
