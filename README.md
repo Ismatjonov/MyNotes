@@ -376,3 +376,11 @@ Console.Writelen($"{bahrullo.Name - bahrullo.Age}");
 
 public record class Person(string Name, int Age);
 ```
+
+Recoding JSON to the file
+```csharp
+Person bakhtovar = new Person("Bakhtovar", 20);
+using var fs = new FileStream("user.json", File Mode.Create);
+using var writer = new StreamWriter(fs);
+writer.Write(bakhtovar);
+```
