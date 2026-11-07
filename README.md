@@ -384,3 +384,13 @@ using var fs = new FileStream("user.json", File Mode.Create);
 using var writer = new StreamWriter(fs);
 writer.Write(bakhtovar);
 ```
+
+ASP.NET Core
+```csharp
+var builder = new WebApplicationBuilder(args);
+var app = builder.Build();
+
+app.MapGet("/", => "Helloo World!");
+
+app.Run();
+```
