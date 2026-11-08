@@ -430,7 +430,7 @@ var builder = new WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 var name = "";
-var age = 0;
+var age = "";
 
 app.Run(async context => {
     var query = context.Request.Query;
@@ -441,4 +441,44 @@ app.Run(async context => {
 });
 
 app.Run();
+```
+Forms
+```csharp
+var builder = new WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.Run(async context => {
+    var response = context.Response;
+    var request = context.Request;
+
+    if (request.Path = "/user" && request.Method == POST)
+    {
+        var name = request.Form["name"];
+        var age = requst.Form["age"];
+        await response.WriteAsync("<h2>{name} - {age}</h2>");
+    }
+    else
+    {
+        await response.SendFileAsync("index.html");
+    }
+});
+
+app.Run();
+```
+```html
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+    <meta charset="utf-8" />
+    <title>Forms</title>
+</head>
+<body>
+    <h2>User form</h2>
+    <form method="post" action"user">
+        <p>Name: <input type="text" name="name"></p> <br>
+        <p>Age: <input type="number" name="age"></p> <br>
+        <button>Send</button>
+    </form>
+</body>
+</html>
 ```
