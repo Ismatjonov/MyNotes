@@ -387,10 +387,40 @@ writer.Write(bakhtovar);
 
 ASP.NET Core
 ```csharp
-var builder = new WebApplicationBuilder(args);
+var builder = new WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", => "Helloo World!");
+
+app.Run();
+```
+**HttpContext** - HTTP RESPONSE
+```csharp
+var builder = new WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.Run(async context => {
+    context.Response.ContentType = "text/html charset=utf8";
+    await context.Response.WriteAsync("<h2>Hello World!</h2>");
+});
+
+app.Run();
+```
+**HttpContext** - HTTP REQUEST
+```csharp
+var builder = new WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.Run(async context => {
+    if (context.Request.Path == "/login")
+    {
+        await context.Response.SendFileAsync("login.html");
+    }
+    else
+    {
+        await context.Response.SendFileAsync("index.html");
+    }
+});
 
 app.Run();
 ```
