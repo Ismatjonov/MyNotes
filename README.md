@@ -429,13 +429,10 @@ Query String
 var builder = new WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-var name = "";
-var age = "";
-
 app.Run(async context => {
     var query = context.Request.Query;
-    name = query["name"];
-    age = query["age"];
+    var name = query["name"];
+    var age = query["age"];
     context.Response.ContentType = "text/html charset=utf8";
     await context.Response.WriteAsync("<h2>${name} - {age}</h2>");
 });
