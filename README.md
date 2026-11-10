@@ -484,7 +484,7 @@ Redirect
 var builder = new WebApplicationBuilder.CreateBuilder(args);
 var app = builder.Build();
 
-app.Run(async context =>{
+app.Run(async context => {
     if (context.Request.Path == "/about")
     {
         context.Response.Redirect("html/about.html");
