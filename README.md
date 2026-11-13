@@ -497,3 +497,18 @@ app.Run(async context => {
 
 app.Run();
 ```
+Working with JSON
+```csharp
+var builder = new WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+var tom = Person("Tom", 22);
+
+app.Run(async context =>{
+    await context.Response.WriteAsJsonAsync(tom);
+});
+
+app.Run();
+
+public record class Person(string Name, int Age);
+```
