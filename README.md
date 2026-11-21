@@ -497,7 +497,8 @@ app.Run(async context => {
 
 app.Run();
 ```
-Working with JSON
+### **Working with JSON**
+Serializing
 ```csharp
 var builder = new WebApplication.CreateBuilder(args);
 var app = builder.Build();
@@ -511,4 +512,55 @@ app.Run(async context =>{
 app.Run();
 
 public record class Person(string Name, int Age);
+```
+Deserializing
+```csharp
+var builder = new WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.Run(async context =>{
+    var person = await context.Request.ReadFromJsonAsync();
+    await context.Response.WriteAsync(person);
+});
+
+app.Run();
+
+public record class Person(string Name, int Age);
+```
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <h2>User form</h2>
+    <div id="message"></div>
+    <div>
+        <p>Name: <br />
+            <input name="userName" id="userName" />
+        </p>
+        <p>Age: <br />
+            <input name="userAge" id="userAge" type="number" />
+        </p>
+        <button id="sendBtn">Send</button>
+    </div>
+    <script>
+        document.getElementById("sendBtn").addEventListener("click", send);
+        async function send() {
+            const response = await fetch("/api/user", {
+                method: "POST",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: document.getElementById("userName").value,
+                    age: document.getElementById("userAge").value
+                })
+            });
+            const message = await response.json();
+            document.getElementById("message").innerText = message.text;
+        }
+    </script>
+</body>
+</html>
 ```
