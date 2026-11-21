@@ -564,3 +564,63 @@ public record class Person(string Name, int Age);
 </body>
 </html>
 ```
+**Uploading files to the server**
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="veiwport" content="width=device-width">
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <h2>Choose the file</h2>
+    <form method="post" action="upload" enctype="multipart/form-data">
+        <input type="file" name="uploads" /> <br>
+        <input type="file" name="uploads" /> <br>
+        <input type="file" name="uploads" /> <br>
+        <button>Upload</button>
+    </form>
+</body>
+</html>
+```
+```csharp
+var builder = WebApplication.CreateBuilder();
+var app = builder.Build();
+ 
+app.Run(async (context) =>
+{
+    var response = context.Response;
+    var request = context.Request;
+ 
+    response.ContentType = "text/html; charset=utf-8";
+ 
+    if (request.Path == "/upload" && request.Method=="POST")
+    {
+        IFormFileCollection files = request.Form.Files;
+        // путь к папке, где будут храниться файлы
+        var uploadPath = $"{Directory.GetCurrentDirectory()}/uploads";
+        // создаем папку для хранения файлов
+        Directory.CreateDirectory(uploadPath);
+ 
+        foreach (var file in files)
+        {
+            // путь к папке uploads
+            string fullPath = $"{uploadPath}/{file.FileName}";
+            
+            // сохраняем файл в папку uploads
+            using (var fileStream = new FileStream(fullPath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+        }
+        await response.WriteAsync("Файлы успешно загружены");
+    }
+    else
+    {
+        await response.SendFileAsync("html/index.html");
+    }
+});
+ 
+app.Run();
+```
